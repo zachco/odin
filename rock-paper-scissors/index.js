@@ -4,33 +4,33 @@ let computerScore = 0;
 function oneRound() {
 
 function chooseRandom() {
-    return (Math.floor(Math.random()*3) + 1)
+    return (Math.floor(Math.random()*3) + 1);
 }
 
 let computerSelection = chooseRandom();
 
 function computerPlay() {
     if (computerSelection == 1) {
-        return "Rock"
+        return "Rock";
     } else if (computerSelection == 2) {
-        return "Paper"
+        return "Paper";
     } else if (computerSelection == 3) {
-        return "Scissors"
+        return "Scissors";
     }
 }
 
 const caseComputer = computerPlay();
 
 function computerCase() {
-    let upcase = caseComputer.toUpperCase()
-    return upcase
+    let upcase = caseComputer.toUpperCase();
+    return upcase;
 }
 
 function playerSelection() {
-    let playerPick = prompt("Choose Rock, Paper, or Scissors")
-    let pickPlayer = playerPick
+    let playerPick = prompt("Choose Rock, Paper, or Scissors");
+    let pickPlayer = playerPick;
     let pickCase = pickPlayer.toUpperCase();
-    return pickCase
+    return pickCase;
 }
 
 let computerPick = computerCase();
@@ -40,7 +40,7 @@ function playRound() {
     if(computerPick === playerPick) {
         computerScore = computerScore;
         playerScore = playerScore;
-        return "Tie!"
+        return "Tie!";
     } else if (computerPick == "Rock" && playerPick == "Paper") {
         playerScore++;
         computerScore = computerScore;
@@ -81,9 +81,9 @@ function game() {
 game();
 
 if (playerScore>computerScore) {
-    alert("You win!")
+    alert("You win!");
 } else if (playerScore==computerScore) {
-    alert("It's a tie!")
+    alert("It's a tie!");
 } else {
-    alert("You lose!")
+    alert("You lose!");
 }
